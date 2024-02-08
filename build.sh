@@ -14,7 +14,7 @@ export KBUILD_COMPILER_STRING="$($HOME/clang-r510928/bin/clang --version | head 
 
 if ! [ -d "$HOME/clang-r510928" ]; then
 echo "Clang not found! Cloning..."
-if ! git clone -q https://gitlab.com/kibria5/prebuilts_clang_host_linux-x86_clang-r510928.git --depth=1 --single-branch ~/clang-r510928; then
+if ! git clone -q https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-playground -b 17 --depth=1 --single-branch ~/clang-r510928; then
 echo "Cloning failed! Aborting..."
 exit 1
 fi
